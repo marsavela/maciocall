@@ -3,13 +3,6 @@
 `maciocall` is a Golang application that uses the `api.macaddress.io` API to retrieve the vendor of a given MAC accress.
 
 ## Usage
-
-### For building the Docker container:
-```sh
-$ docker build . -t maciocall
-```
-
-### For retrieving a vendor:
 ```sh
 $ docker run --rm maciocall       
   -address string
@@ -20,6 +13,16 @@ $ docker run --rm maciocall
         Show this help menu.
   -output string
         Type of output. {text|json} (default "text")
+```
+
+### For building the Docker container:
+```sh
+$ docker build . -t maciocall
+```
+
+### For retrieving a vendor:
+```sh
+$ docker run --rm maciocall -address <MAC_ADDRESS> -apikey <YOUR_API_KEY>
 ```
 Example:
 ```sh
